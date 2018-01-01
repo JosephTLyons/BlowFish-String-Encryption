@@ -9,23 +9,23 @@
 
 String encryptStringWithBlowFish (const String &key, const String &textToEncrypt)
 {
-    MemoryBlock mb;
-    MemoryOutputStream os (mb, false);
-    os << textToEncrypt;
+    MemoryBlock memoryBlock;
+    MemoryOutputStream memoryOutputStream (memoryBlock, false);
+    memoryOutputStream << textToEncrypt;
     
     BlowFish blowFish (key.toUTF8(), (int) key.getNumBytesAsUTF8());
-    blowFish.encrypt (mb);
+    blowFish.encrypt (memoryBlock);
     
-    return mb.toBase64Encoding();
+    return memoryBlock.toBase64Encoding();
 }
 
 String decryptStringWithBlowFish (const String &key, String &textToDecrypt)
 {
-    MemoryBlock mb;
-    mb.fromBase64Encoding(textToDecrypt);
+    MemoryBlock memoryBlock;
+    memoryBlock.fromBase64Encoding(textToDecrypt);
     
     BlowFish blowFish (key.toUTF8(), (int) key.getNumBytesAsUTF8());
-    blowFish.decrypt (mb);
+    blowFish.decrypt (memoryBlock);
     
-    return mb.toString();
+    return memoryBlock.toString();
 }
