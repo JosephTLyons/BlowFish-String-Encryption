@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="qL4fEK" name="BlowFish String Encryption" displaySplashScreen="0"
+              reportAppUsage="1" splashScreenColour="Dark" projectType="consoleapp"
+              version="1.0.0" bundleIdentifier="com.yourcompany.TextEncryption"
+              includeBinaryInAppConfig="1" cppLanguageStandard="11" companyCopyright=""
+              jucerVersion="5.2.0">
+  <MAINGROUP id="a9iilo" name="BlowFish String Encryption">
+    <GROUP id="{B3C37B3F-A46F-7626-D02D-C16BDBF7B964}" name="Source">
+      <FILE id="fumEnk" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
+      <FILE id="jeqVFo" name="BlowFishStringEncryption.h" compile="0" resource="0"
+            file="Source/BlowFishStringEncryption.h"/>
+      <FILE id="rTDkHz" name="BlowFishStringEncryption.cpp" compile="1" resource="0"
+            file="Source/BlowFishStringEncryption.cpp"/>
+    </GROUP>
+  </MAINGROUP>
+  <EXPORTFORMATS>
+    <XCODE_MAC targetFolder="Builds/MacOSX">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" enablePluginBinaryCopyStep="1" isDebug="1" optimisation="1"
+                       linkTimeOptimisation="0" targetName="Text Encryption"/>
+        <CONFIGURATION name="Release" enablePluginBinaryCopyStep="1" isDebug="0" optimisation="3"
+                       linkTimeOptimisation="1" targetName="Text Encryption"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_core" path="../../../Libraries/JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../../Libraries/JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../../Libraries/JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../../Libraries/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../Libraries/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../Libraries/JUCE/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../../../Libraries/JUCE/modules"/>
+        <MODULEPATH id="juce_video" path="../../../Libraries/JUCE/modules"/>
+      </MODULEPATHS>
+    </XCODE_MAC>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_cryptography" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_video" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+  </MODULES>
+  <JUCEOPTIONS/>
+</JUCERPROJECT>
