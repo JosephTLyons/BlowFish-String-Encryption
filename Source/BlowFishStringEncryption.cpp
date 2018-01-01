@@ -22,7 +22,7 @@ String encryptStringWithBlowFish (const String &key, const String &textToEncrypt
 String decryptStringWithBlowFish (const String &key, String &textToDecrypt)
 {
     MemoryBlock memoryBlock;
-    memoryBlock.fromBase64Encoding(textToDecrypt);
+    memoryBlock.fromBase64Encoding (textToDecrypt);
     
     BlowFish blowFish (key.toUTF8(), (int) key.getNumBytesAsUTF8());
     blowFish.decrypt (memoryBlock);
