@@ -18,7 +18,7 @@ String encryptStringWithBlowFish (const String &key, const String &textToEncrypt
     return memoryBlock.toBase64Encoding();
 }
 
-String decryptStringWithBlowFish (const String &key, String &textToDecrypt)
+String decryptStringWithBlowFish (const String &key, const String &textToDecrypt)
 {
     MemoryBlock memoryBlock;
     memoryBlock.fromBase64Encoding (textToDecrypt);
