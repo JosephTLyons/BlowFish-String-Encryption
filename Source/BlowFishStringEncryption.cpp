@@ -10,8 +10,7 @@
 String encryptStringWithBlowFish (const String &key, const String &textToEncrypt)
 {
     MemoryBlock memoryBlock;
-    MemoryOutputStream memoryOutputStream (memoryBlock, false);
-    memoryOutputStream << textToEncrypt;
+    memoryBlock.loadFromHexString (String::toHexString(textToEncrypt.toUTF8(), (int) textToEncrypt.getNumBytesAsUTF8()));
     
     BlowFish blowFish (key.toUTF8(), (int) key.getNumBytesAsUTF8());
     blowFish.encrypt (memoryBlock);
