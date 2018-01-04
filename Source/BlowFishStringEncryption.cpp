@@ -10,6 +10,7 @@
 String encryptStringWithBlowFish (const String &key, const String &textToEncrypt)
 {
     MemoryBlock memoryBlock;
+    
     MemoryOutputStream memoryOutputStream (memoryBlock, false);
     memoryOutputStream << textToEncrypt;
     
